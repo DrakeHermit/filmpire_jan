@@ -1,47 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./components/App";
-import { createRoot } from "react-dom/client";
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  Link,
-} from "react-router-dom";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-import {
-  Actors,
-  MovieInformation,
-  Movies,
-  NavBar,
-  Profile,
-} from "./components/index";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-  },
-  {
-    path: "movie/:id",
-    element: <MovieInformation />,
-  },
-  {
-    path: "movies",
-    element: <Movies />,
-  },
-  {
-    path: "actors/:id",
-    element: <Actors />,
-  },
-  {
-    path: "profile/:id",
-    element: <Profile />,
-  },
-]);
+const theme = createTheme({});
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+  <ThemeProvider theme={theme}>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </ThemeProvider>
 );

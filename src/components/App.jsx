@@ -27,9 +27,14 @@ const App = () => {
   const classes = useStyles();
 
   return (
-    <RouterProvider router={router}>
-      <CssBaseline />
-    </RouterProvider>
+    <div className={classes.root}>
+      <main className={classes.content}>
+        <div className={classes.toolbar} />
+        <RouterProvider router={router}>
+          <CssBaseline />
+        </RouterProvider>
+      </main>
+    </div>
   );
 };
 export default App;

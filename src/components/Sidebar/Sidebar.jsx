@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import {
   Divider,
   List,
-  ListItem,
+  ListItemButton,
   ListItemText,
   ListSubheader,
   ListItemIcon,
@@ -50,7 +50,7 @@ const Sidebar = ({ setMobileOpen }) => {
         <ListSubheader>Categories</ListSubheader>
         {categories.map(({ label, value }) => (
           <Link key={value} className={classes.links} to="/">
-            <ListItem onClick={() => {}} button="true">
+            <ListItemButton onClick={() => {}}>
               <ListItemIcon>
                 {/* <img
                   src={redLogo}
@@ -60,7 +60,7 @@ const Sidebar = ({ setMobileOpen }) => {
                 /> */}
               </ListItemIcon>
               <ListItemText primary={label} />
-            </ListItem>
+            </ListItemButton>
           </Link>
         ))}
       </List>
@@ -69,7 +69,7 @@ const Sidebar = ({ setMobileOpen }) => {
         <ListSubheader>Genres</ListSubheader>
         {demoCategories.map(({ label, value }) => (
           <Link key={value} className={classes.links} to="/">
-            <ListItem onClick={() => {}} button="true">
+            <ListItemButton onClick={() => {}}>
               <ListItemIcon>
                 {/* <img
                   src={redLogo}
@@ -79,7 +79,7 @@ const Sidebar = ({ setMobileOpen }) => {
                 /> */}
               </ListItemIcon>
               <ListItemText primary={label} />
-            </ListItem>
+            </ListItemButton>
           </Link>
         ))}
       </List>

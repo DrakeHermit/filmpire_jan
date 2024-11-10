@@ -5,7 +5,6 @@ import {
   createRoutesFromElements,
   RouterProvider,
 } from "react-router-dom";
-import useStyles from "../components/styles";
 import HomePage from "../pages/HomePage";
 import MainLayout from "../layouts/MainLayout";
 import MovieInformation from "../pages/MovieInformation";
@@ -24,17 +23,10 @@ const router = createBrowserRouter(
 );
 
 const App = () => {
-  const classes = useStyles();
-
   return (
-    <div className={classes.root}>
-      <main className={classes.content}>
-        <div className={classes.toolbar} />
-        <RouterProvider router={router}>
-          <CssBaseline />
-        </RouterProvider>
-      </main>
-    </div>
+    <RouterProvider router={router}>
+      <CssBaseline />
+    </RouterProvider>
   );
 };
 export default App;

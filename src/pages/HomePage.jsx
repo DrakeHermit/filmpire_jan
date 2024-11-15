@@ -9,8 +9,6 @@ import {
 import { useSelector } from "react-redux";
 import MovieList from "../components/MovieList/MovieList";
 
-const tmdbApiKey = import.meta.env.REACT_APP_TMDB_KEY;
-
 import { useGetMoviesQuery } from "../services/TMDB";
 
 const HomePage = () => {

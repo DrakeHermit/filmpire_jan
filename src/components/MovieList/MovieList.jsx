@@ -1,18 +1,19 @@
-import { Grid2 } from "@mui/material";
+import Grid from "@mui/material/Grid2";
 
 import useStyles from "./styles";
 import Movie from "../Movie/Movie";
 
 const MovieList = ({ movies }) => {
   const classes = useStyles();
+  console.log(movies.results[0].title);
 
   return (
-    // <Grid2 container className={classes.moviesContainer}>
-    //   {movies.results.map((movie, i) => {
-    //     <Movie key={i} movie={movie} i={i} />;
-    //   })}
-    // </Grid2>
-    <Movie />
+    <Grid container className={classes.moviesContainer}>
+      {/* {movies.results.map((movie, i) => {
+        <Movie key={i} movie={movie} i={i} />;
+      })} */}
+      <Movie />
+    </Grid>
   );
 };
 export default MovieList;

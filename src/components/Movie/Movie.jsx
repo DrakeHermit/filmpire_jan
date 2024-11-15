@@ -9,21 +9,20 @@ const Movie = ({ movie, i }) => {
   console.log(movie, i);
 
   return (
-    // <Grid
-    //   container
-    //   item
-    //   xs={12}
-    //   sm={6}
-    //   md={4}
-    //   lg={3}
-    //   xl={2}
-    //   className={classes.movie}
-    // >
-    //   <Typography className={classes.title} variant="h5">
-    //     {movie.title}
-    //   </Typography>
-    // </Grid>
-    <h1>I work 222</h1>
+    <Grid
+      container
+      item
+      xs={12}
+      sm={6}
+      md={4}
+      lg={3}
+      xl={2}
+      className={classes.movie}
+    >
+      <Typography className={classes.title} variant="h5">
+        {movie.title}
+      </Typography>
+    </Grid>
   );
 };
 export default Movie;
